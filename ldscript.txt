@@ -1,0 +1,32 @@
+OUTPUT_ARCH(arm)
+SECTIONS
+{
+	. = 0x00000000;
+	.text :
+	ALIGN(4)
+	{
+		asm/bios.o
+	} = 0
+
+/*
+	. = 0x02000000;
+	.ewram_data :
+	ALIGN(4)
+	{
+		INCLUDE "sym_ewram.txt"
+	} = 0
+
+	. = 0x03000000;
+	.bss :
+	ALIGN(4)
+	{
+		INCLUDE "sym_iwram.txt"
+	} = 0
+*/
+
+    /* Discard everything not specifically mentioned above. */
+    /DISCARD/ :
+    {
+        *(*);
+    }
+}

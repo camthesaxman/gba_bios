@@ -1,0 +1,25 @@
+# Output files
+src/*.s
+src/**/*.s
+*.o
+*.elf
+*.bin
+*.map
+*.4bpp
+*.8bpp
+*.gbapal
+*.lz
+
+# Tools
+tools/*
+*.exe
+
+# Emulator save files
+*.sav
+*.sgm
+
+# Various other detritus that doesn't need to be tracked
+Thumbs.db
+*.dump
+*.spr
+*.bak
