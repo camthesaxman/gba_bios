@@ -29,9 +29,9 @@ _start:
         b reserved_vector   @ 0x0C Abort Prefetch
         b reserved_vector   @ 0x10 Abort Data
         b reserved_vector   @ 0x14 Reserved
-        b irq_vector        @ 0x1C FIQ
+        b irq_vector        @ 0x18 IRQ
 
-
+@ 0x1C FIQ
 @---------------------------------------------------------------------------------
 reserved_vector:
 @---------------------------------------------------------------------------------
